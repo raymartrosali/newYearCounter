@@ -21,9 +21,15 @@ if(timerMin < 10){
 if(timerSec < 10){
   timerSec = "0" + timerSec;
 }
-getHour.innerHTML = timerHour;
-getMin.innerHTML = timerMin;
-getSec.innerHTML = timerSec;
+if (yearDate == 2019) {
+    getHour.innerHTML = "00";
+    getMin.innerHTML = "00";
+    getSec.innerHTML = "00";
+}else{
+    getHour.innerHTML = timerHour;
+    getMin.innerHTML = timerMin;
+    getSec.innerHTML = timerSec;
+}
 setInterval(function(){
   sourceDate = new Date();
   yearDate = sourceDate.getFullYear();
